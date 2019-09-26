@@ -1,0 +1,9 @@
+# Intelli J
+.idea/**
+*.iml
+*.ipr
+*.iws
+*.rdb
+target/**
+data/**
+db/**
