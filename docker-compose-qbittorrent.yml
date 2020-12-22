@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  qbittorrent:
+    image: ghcr.io/linuxserver/qbittorrent
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Guatemala
+      - UMASK_SET=022
+      - WEBUI_PORT=8080
+    volumes:
+      - /mnt/JF_01TB/Movies/torrent/config>:/config
+      - /mnt/JF_01TB/Movies/torrent/downloads>:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8080:8080
+    restart: unless-stopped
