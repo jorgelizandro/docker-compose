@@ -11,8 +11,8 @@ services:
       - UMASK_SET=022
       - WEBUI_PORT=8080
     volumes:
-      - /mnt/JF_01TB/Movies/torrent/config>:/config
-      - /mnt/JF_01TB/Movies/torrent/downloads>:/downloads
+      - /mnt/JF_01TB/Movies/torrent/config:/config
+      - /mnt/JF_01TB/Movies/torrent/downloads:/downloads
     ports:
       - 6881:6881
       - 6881:6881/udp
